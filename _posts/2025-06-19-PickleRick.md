@@ -4,8 +4,13 @@ date : 2025-06-19
 layout : post
 categories : [THM]
 tags : [PickleRick]
+auhtor : jana
 ---
 # Machine name: Pickle Rick
+
+## 📄 Machine Summary
+
+**Pickle Rick** is a beginner-level CTF machine from TryHackMe that tests basic enumeration, web exploitation, and privilege escalation skills. The machine mimics a scenario where the user has to exploit a web login page, gain command execution, and escalate privileges to retrieve three hidden "ingredients" (flags) for Rick's pickle recipe. It reinforces the importance of analyzing source code, understanding file permissions, and using common Linux commands effectively.
 
 ## Recon:
 
@@ -18,7 +23,7 @@ tags : [PickleRick]
   80/tcp open  http    Apache httpd 2.4.41 
 ## Gobuster Scan
 
- ` gobuster dir -u http://10.10.127.115 -w /usr/share/wordlists/dirb/common.txt `
+ `gobuster dir -u http://10.10.127.115 -w /usr/share/wordlists/dirb/common.txt`
 
 - gobuster found /login.php and /robots.txt
 
@@ -36,7 +41,7 @@ tags : [PickleRick]
 - get the first ingredient through `curl http://10.10.127.115/Sup3rS3cretPickl3Ingred.txt`
  * Returned: mr. meeseek hair
 
-- we have the full permission PASSWORD : NO by check ` sudo -l ` command
+- we have the full permission PASSWORD : NO by check `sudo -l` command
 
 - get the second & third incgedient by copy paste into the directory
 
