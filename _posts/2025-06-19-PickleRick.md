@@ -3,7 +3,7 @@ title : "Pickle Rick"
 date : 2025-06-19 
 layout : post
 categories : [THM]
-tags :[Pickle Rick]
+tags : [PickleRick]
 ---
 # Machine name: Pickle Rick
 
@@ -33,7 +33,7 @@ tags :[Pickle Rick]
 
 - try to execute linux commands on the command panel
 
-- get the first incrediant through `curl http://10.10.127.115/Sup3rS3cretPickl3Ingred.txt`
+- get the first ingredient through `curl http://10.10.127.115/Sup3rS3cretPickl3Ingred.txt`
  * Returned: mr. meeseek hair
 
 - we have the full permission PASSWORD : NO by check ` sudo -l ` command
@@ -46,11 +46,11 @@ tags :[Pickle Rick]
  * Opened second.txt: 1 jerry tear
  * Opened third.txt: fleeb juice
 
-## Leassons Learned
+## Lessons Learned
 
 - Enumeration is the keypart of pentest.
-- Notedown the directory and permissions are crucial while in privilege escalation.
-- simple web form also can be injectable.
+- Notedown the directory permissions are crucial while in privilege escalation.
+- simple web forms also can be exploitable.
 
 ## Tools Used
 
