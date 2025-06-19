@@ -4,7 +4,7 @@ date : 2025-06-19
 layout : post
 categories : [THM]
 tags : [PickleRick]
-auhtor : jana
+author : jana
 ---
 # Machine name: Pickle Rick
 
@@ -12,9 +12,11 @@ auhtor : jana
 
 **Pickle Rick** is a beginner-level CTF machine from TryHackMe that tests basic enumeration, web exploitation, and privilege escalation skills. The machine mimics a scenario where the user has to exploit a web login page, gain command execution, and escalate privileges to retrieve three hidden "ingredients" (flags) for Rick's pickle recipe. It reinforces the importance of analyzing source code, understanding file permissions, and using common Linux commands effectively.
 
+---
+
 ## Recon:
 
-## Nmap Scan
+### Nmap Scan
 ```bash
  nmap -sV -A -oN nmap.txt
 ```
