@@ -8,17 +8,17 @@ author : jana
 ---
 # Machine name: Pickle Rick
 
-## 📄 Machine Summary
+## Machine Summary
 
 **Pickle Rick** is a beginner-level CTF machine from TryHackMe that tests basic enumeration, web exploitation, and privilege escalation skills. The machine mimics a scenario where the user has to exploit a web login page, gain command execution, and escalate privileges to retrieve three hidden "ingredients" (flags) for Rick's pickle recipe. It reinforces the importance of analyzing source code, understanding file permissions, and using common Linux commands effectively.
 
 ---
 
-## Recon:
+## Reconnaisance:
 
 ### Nmap Scan
 ```bash
- nmap -sV -A -oN nmap.txt
+ nmap -sV -A -oN nmap.txt 10.10.127.115
 ```
 - nmap found ports 22(ssh) , 80(http)
   22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.11 
