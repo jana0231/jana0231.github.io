@@ -1,13 +1,14 @@
+---
+title : "TwoMillion"
+date : 2025-06-19 
+layout : post
+categories : [HTB]
+tags : [TwoMillion]
+Difficulty : Easy
+author : jana
+---
 
 # 🔍 Mr. Robot CTF Walkthrough – A Penetration Testing Report
-
-> Author: YourNameHere  
-> Date: May 15, 2025  
-> Machine: Mr. Robot (VulnHub / TryHackMe)  
-> Difficulty: Medium  
-> IP Address: `10.10.10.100`  
-
----
 
 ## 🧠 Objective
 
