@@ -37,6 +37,7 @@ Visited `http://10.10.11.221/`:
 
 - Static page showing a celebration for 2 million users.
 - Find the invite page and look at source through browser
+
 ![image](/assets/img/CTFS/TwoMillion/web_source_network_tab.png)
 
 ## Found
@@ -105,7 +106,9 @@ Used credentials to SSH as `admin` and capture user flag.
 ![image](/assets/img/CTFS/TwoMillion/mail.png)
 
 3. Ran publicly available exploit → gained root privileges → captured root flag.
+
 ![image](/assets/img/CTFS/TwoMillion/Root-access.png)
+
 ---
 
 ## ✅ 6. Summary of Attack Flow
@@ -141,6 +144,6 @@ Used credentials to SSH as `admin` and capture user flag.
 
 ---
 
-> ✍️ *Enjoyed this walkthrough? Subscribe for more HTB lab write-ups and real-world pentesting content.*
+> ✍️ *Enjoyed this walkthrough? follow for more HTB lab write-ups and real-world pentesting content.*
 
 ---
