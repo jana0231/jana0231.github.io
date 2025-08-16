@@ -1,3 +1,12 @@
+---
+title : "Linux Backdoors"
+date : 2025-06-25 
+layout : post
+categories : [BACKDOOR]
+tags : [PHP,CRONJOB,BACKDOOR]
+author : jana
+---
+
 # PHP and Cron Job Backdoors: Gaining Persistent Access Like a Pro
 
 In this post, we’ll dive into two powerful techniques attackers use to maintain access to a compromised Linux server: **PHP backdoors** and **cron job backdoors**. These methods are often used in **post-exploitation** scenarios to establish **persistence**. Let's break them down clearly, like a mentor would.
