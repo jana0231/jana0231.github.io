@@ -1,6 +1,6 @@
 ---
 title : "Linux Backdoors Part-I"
-date : 2025-08-17
+date : 2025-08-15
 layout : post
 categories : [BACKDOOR]
 tags : [SSH, BACKDOOR, PERSISTENCE, LINUX]
