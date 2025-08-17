@@ -1,6 +1,6 @@
 ---
 title : "Linux Backdoors"
-date : 2025-06-25 
+date : 2025-08-16 
 layout : post
 categories : [BACKDOOR]
 tags : [PHP,CRONJOB,BACKDOOR]
