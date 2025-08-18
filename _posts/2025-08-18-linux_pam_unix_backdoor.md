@@ -1,6 +1,6 @@
 ---
 title : "Linux Backdoors Part IV"
-date : 2025-07-25
+date : 2025-08-18
 layout : post
 categories : [BACKDOOR]
 tags : [PAM, BACKDOOR, PERSISTENCE, LINUX]
